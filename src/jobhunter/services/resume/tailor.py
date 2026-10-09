@@ -167,7 +167,7 @@ def default_cover_letter(master: dict, job, contact: str | None, keywords: list[
     else:
         skills_sentence = ""
     return COVER_LETTER_TEMPLATE.format(
-        today=date.today().strftime("%B %-d, %Y"),
+        today=f"{date.today():%B} {date.today().day}, {date.today():%Y}",
         contact=contact or "Hiring Manager",
         title=job.title,
         company=job.company,
